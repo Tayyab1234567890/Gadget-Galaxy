@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadget Galaxy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?familcloudflarey=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs..com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    crossorigin="anonymous">
+    
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      /* background-color : #343a40 white palevioletred; */
+      background-image: linear-gradient(to bottom right, #343a40, rgb(74, 66, 90));
+    }
+
+    .navbar-brand img.logo {
+      max-height: 50px;
+      margin-left: 15px;
+    }
+    .logo{
+        border-radius: 10px;
+        border: 0.5px solid #212529;
+        transform: rotate(-20deg);
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .main-image {
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 600px; /* Increased height */
+  position: relative; /* Add position relative for overlay */
+}
+.lead{
+  font-size: 50px;
+}
+
+/* Overlay styles */
+.main-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+}
+
+.text-container_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  width: 100%; /* Ensure text is centered horizontally */
+  padding: 0 20px; /* Add padding for better readability */
+  box-sizing: border-box; /* Include padding in width calculation */
+  z-index: 1; /* Ensure content is on top of overlay */
+}
+
+.text-container_1 h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.25rem;
+}
+.btn_main{
+    padding: 10px 5px 10px 5px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: 20px 20px 60px #f44e0871 ,inset -20px -20px 60px #311731;
+    
+}
+.btn_main:hover{
+    padding: 15px 8px 15px 8px;
+    transition: padding 0.4s ease;
+    font-size: 1.2em;
+    transition: font-size 0.4s ease;
+    border-radius: 30px;
+    
+}
+.text-danger-emphasis{
+  font-size: 50px;
+}
+.fastest{
+  height: 220px;
+}
+.fastimg{
+  height: 20rem;
+}
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+    .card img{
+        display: block;
+         width: 100%; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+         object-fit: cover; /* Ensure the image covers the entire area */
+        overflow: hidden;
+    }
+    .btn-primary {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .btn-primary:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+
+    .footer {
+      background-color: #212529;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .text-danger-emphasis {
+      color: #dc3545;
+    }
+    /* contecting */
+    .contact-card {
+      max-width: 100%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to bottom right, #bdc5cb, rgb(127, 120, 143));
+    }
+    
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    
+    .contact-info h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    
+    .contact-info p {
+      margin-bottom: 5px;
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    
+    .contact-form button {
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+    .endbtn{
+      background-image: linear-gradient(to bottom right, #343a40, rgb(74, 66, 90));
+    }
+    .basicbtn{
+     color: white;
+      box-shadow: 20px 20px 60px #f44e0871 ,inset -20px -20px 60px #311731;
+      border-radius: 20px;
+      max-width: 90px;
+      max-height: 35px;
+      text-align: center;
+      align-self: center;
+      margin-top: 5px;
+
+    }
+    .basicbtn:hover{
+      background-image: linear-gradient(to bottom right, #381276d4, rgb(255, 255, 255));
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.jpg" alt="Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Image -->
+  <div class="main-image">
+    <div class="text-container_1">
+      <h1 class="display-4">Upgrade Your Tech. Explore the Latest in Laptops at</h1>
+      <h2 class="lead"> <strong>Gadget Galaxy</strong></h2>
+      <button class="btn_main ">Find out more</button>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="container mt-5">
+    <h5 class="text-danger-emphasis">Categories</h5>
+    <!-- tablets -->
+    <h2 class="mb-5">Tablets</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="ipad.jpg" class="card-img-top new_top " alt="Category 1"> 
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="samungtablet.jpg" class="card-img-top" alt="Category 2">
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="lenovo_tab.jpg" class="card-img-top" alt="Category 3">
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- chrome books -->
+  <div class="container mt-5">
+    <h2 class="mb-5">Chrome books</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="acerbook.webp" class="card-img-top" alt="Book 1">
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="dellbook.avif" class="card-img-top" alt="Book 2">
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="googlebook.jpg" class="card-img-top" alt="Book 3">
+          <button class="basicbtn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- gamming Laptops -->
+ <div class="container mt-5">
+  <h2 class="mb-5">Gamming Laptops</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="lenovo_gamming.jpg" class="card-img-top" alt="Book 1">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="laptop-gaming-2.png" class="card-img-top" alt="Book 2">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="msi_gamming.jpg" class="card-img-top" alt="Book 3">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- office Laptops -->
+<div class="container mt-5">
+  <h2 class="mb-5">Laptops</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="office_lenove.jpg" class="card-img-top" alt="Book 1">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="office_2.jpeg" class="card-img-top" alt="Book 2">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="office_3.webp" class="card-img-top" alt="Book 3">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- mackbooks -->
+<div class="container mt-5">
+  <h2 class="mb-5">MackBooks</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="MacBook-Air.webp" class="card-img-top" alt="Book 1">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="Mackbook_pro.jpg" class="card-img-top" alt="Book 2">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="macbook-pro-3.webp" class="card-img-top" alt="Book 3">
+        <button class="basicbtn">Shop Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Customized Theme -->
+  <div class="container-fluid theme-section mt-5">
+    <div class="container">
+      
+    </div>
+  </div>
+
+  <!--World Fastest Laptop  -->
+  <div class="container mt-5 "> 
+    <div class="card fastest">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="ASUS-ROG-STRIX-SCAR-17.jpg" class="img-fluid rounded-start fastimg" alt="Vendor">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">World Fastest Laptop</h5>
+            <p class="card-text">ASUS ROG STRIX SCAR 18.</p>
+            <h6 class="card-text">Customize as You Wish</h6>
+            <button class="basicbtn">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!-- vedio -->
+<video src="vedio.mp4" autoplay controls height="500px" width="100%" muted></video>
+<!-- contecting -->
+<div class="contact-card">
+  <div class="contact-info">
+    <h3>Contact Us</h3>
+    <p><strong>Email:</strong> example@example.com</p>
+    <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+    <p><strong>Address:</strong> 123 Main Street, Gulberg3, lahore, pakistan</p>
+  </div> <br>
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button class="endbtn">Send</button>
+  </div>
+</div>
+  <!-- Footer -->
+  <footer class="footer">
+      <p class="mt-3">&copy; 2024 Muhammad Tayyab Mansha.Gadget Galaxy. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
